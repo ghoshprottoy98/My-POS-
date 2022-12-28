@@ -1,0 +1,111 @@
+// Bootstrap override
+@import "variables.sass"
+@import '../../../node_modules/bootstrap/scss/bootstrap'
+@import '../../../node_modules/bootstrap-vue/src/index.scss'
+@import "../../../node_modules/vue-select/src/scss/vue-select.scss"
+
+
+.cursor-pointer
+  cursor: pointer
+
+// Custom CSS
+body
+  background: rgba(0, 0, 0, 0.05)
+
+
+.menu-toggle-button
+  font-size: 24px
+  padding: 3px
+  line-height: 0
+
+.sidebar-overlay
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1
+  background-color: rgba(0, 0, 0, 0.8)
+  width: 100%
+  height: 100%
+  opacity: 1
+  transition: all 0.3s ease-in-out
+
+  &.collapsed
+    display: none
+    opacity: 0
+#sidebar
+  background-color: rgba($dark, 0.95) !important
+  z-index: 99
+  .sidebar-section
+    margin-bottom: 20px
+
+    .title
+      font-size: 16px
+      font-weight: bold
+      padding: 0 0 0 15px
+      cursor: pointer
+      color: #ddd
+
+    .list
+      .list-group-item
+        border: none
+        border-radius: 0
+        border-left: 6px solid transparent
+        background: none
+        padding: 7px 15px
+        color: #ddd
+        cursor: pointer
+
+        svg
+          margin-right: 10px
+          width: 1.5em
+          height: 1.5em
+
+        &:hover
+          border-left-color: $primary
+          background: rgba(#fff, 0.05)
+
+        &:active
+
+        &:focus
+          outline: none
+
+
+.card
+  width: 500px
+  max-width: 90%
+  margin: auto
+
+.table
+  background: #fff !important
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important
+
+.pagination
+  .page-item
+    & > span
+      background: rgba(#fff, 1)
+
+    &.disabled > span
+      transition: all 0.3s ease-in-out
+      background: rgba(0, 0, 0, 0.1)
+      cursor: not-allowed
+
+    .page-link
+      z-index: 0
+
+
+.modal
+  .close
+    display: none
+
+.table
+  th
+    text-align: center
+
+.fade-enter-active
+  transition: opacity 1s
+
+.fade-leave-active
+  opacity: 0
+
+.fade-enter, .fade-leave-to
+  opacity: 0
